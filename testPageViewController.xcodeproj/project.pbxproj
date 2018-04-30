@@ -12,9 +12,11 @@
 		859E65552095AD19005591EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 859E654D2095AD19005591EF /* LaunchScreen.storyboard */; };
 		859E65562095AD19005591EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 859E654F2095AD19005591EF /* Main.storyboard */; };
 		859E65572095AD19005591EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859E65512095AD19005591EF /* AppDelegate.swift */; };
+		AAB2C19114B0611DD9B98AE2 /* Pods_testPageViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EB278CBEF97676940837A84 /* Pods_testPageViewController.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4EB278CBEF97676940837A84 /* Pods_testPageViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testPageViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		859E65342094B395005591EF /* testPageViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testPageViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		859E654B2095AD19005591EF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		859E654C2095AD19005591EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		859E65502095AD19005591EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		859E65512095AD19005591EF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		859E65522095AD19005591EF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7FC1B4036A4758F4AE0C5A7 /* Pods-testPageViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testPageViewController.release.xcconfig"; path = "Pods/Target Support Files/Pods-testPageViewController/Pods-testPageViewController.release.xcconfig"; sourceTree = "<group>"; };
+		EC3E554756684AC0E433D1C4 /* Pods-testPageViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testPageViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testPageViewController/Pods-testPageViewController.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAB2C19114B0611DD9B98AE2 /* Pods_testPageViewController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		086134055EF530DF6466B023 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EB278CBEF97676940837A84 /* Pods_testPageViewController.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		859E652B2094B395005591EF = {
 			isa = PBXGroup;
 			children = (
 				859E65492095AD19005591EF /* Soucese */,
 				859E65352094B395005591EF /* Products */,
+				ACE80751B1667CEA35C659EB /* Pods */,
+				086134055EF530DF6466B023 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +87,15 @@
 			path = testPageViewController;
 			sourceTree = "<group>";
 		};
+		ACE80751B1667CEA35C659EB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC3E554756684AC0E433D1C4 /* Pods-testPageViewController.debug.xcconfig */,
+				B7FC1B4036A4758F4AE0C5A7 /* Pods-testPageViewController.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -79,9 +103,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 859E65462094B398005591EF /* Build configuration list for PBXNativeTarget "testPageViewController" */;
 			buildPhases = (
+				4EADC345E046B0D4B911A27C /* [CP] Check Pods Manifest.lock */,
 				859E65302094B395005591EF /* Sources */,
 				859E65312094B395005591EF /* Frameworks */,
 				859E65322094B395005591EF /* Resources */,
+				65EF6583486713F71E055F81 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -137,6 +163,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4EADC345E046B0D4B911A27C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-testPageViewController-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65EF6583486713F71E055F81 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-testPageViewController/Pods-testPageViewController-frameworks.sh",
+				"${PODS_ROOT}/Reveal-SDK/RevealServer-14/iOS/RevealServer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-testPageViewController/Pods-testPageViewController-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		859E65302094B395005591EF /* Sources */ = {
@@ -221,7 +286,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -275,7 +340,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -286,14 +351,12 @@
 		};
 		859E65472094B398005591EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC3E554756684AC0E433D1C4 /* Pods-testPageViewController.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Soucese/testPageViewController/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.syouit.testPageViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -303,14 +366,12 @@
 		};
 		859E65482094B398005591EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7FC1B4036A4758F4AE0C5A7 /* Pods-testPageViewController.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Soucese/testPageViewController/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.syouit.testPageViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
