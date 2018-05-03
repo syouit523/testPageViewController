@@ -1,0 +1,9 @@
+{
+  "commitish" : "1.7.0",
+  "iOS" : [
+    {
+      "name" : "EasyPeasy",
+      "hash" : "82cb47016e4b8f72cd6df32e37be217827dd21ede7b95839008220a09b6c31e5"
+    }
+  ]
+}

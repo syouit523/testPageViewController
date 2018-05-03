@@ -12,6 +12,10 @@
 		859E65552095AD19005591EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 859E654D2095AD19005591EF /* LaunchScreen.storyboard */; };
 		859E65562095AD19005591EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 859E654F2095AD19005591EF /* Main.storyboard */; };
 		859E65572095AD19005591EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859E65512095AD19005591EF /* AppDelegate.swift */; };
+		85F05C45209A2803002C1C08 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F05C44209A2803002C1C08 /* TabView.swift */; };
+		85F05C47209A2939002C1C08 /* TabPageOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F05C46209A2939002C1C08 /* TabPageOption.swift */; };
+		85F05C49209B0B5C002C1C08 /* TabCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F05C48209B0B5C002C1C08 /* TabCollectionCell.swift */; };
+		85F05C4B209B0EC5002C1C08 /* EasyPeasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F05C4A209B0EC5002C1C08 /* EasyPeasy.framework */; };
 		AAB2C19114B0611DD9B98AE2 /* Pods_testPageViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EB278CBEF97676940837A84 /* Pods_testPageViewController.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +28,10 @@
 		859E65502095AD19005591EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		859E65512095AD19005591EF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		859E65522095AD19005591EF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85F05C44209A2803002C1C08 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		85F05C46209A2939002C1C08 /* TabPageOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPageOption.swift; sourceTree = "<group>"; };
+		85F05C48209B0B5C002C1C08 /* TabCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCollectionCell.swift; sourceTree = "<group>"; };
+		85F05C4A209B0EC5002C1C08 /* EasyPeasy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EasyPeasy.framework; path = Carthage/Build/iOS/EasyPeasy.framework; sourceTree = "<group>"; };
 		B7FC1B4036A4758F4AE0C5A7 /* Pods-testPageViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testPageViewController.release.xcconfig"; path = "Pods/Target Support Files/Pods-testPageViewController/Pods-testPageViewController.release.xcconfig"; sourceTree = "<group>"; };
 		EC3E554756684AC0E433D1C4 /* Pods-testPageViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testPageViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testPageViewController/Pods-testPageViewController.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -33,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85F05C4B209B0EC5002C1C08 /* EasyPeasy.framework in Frameworks */,
 				AAB2C19114B0611DD9B98AE2 /* Pods_testPageViewController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,6 +52,7 @@
 		086134055EF530DF6466B023 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				85F05C4A209B0EC5002C1C08 /* EasyPeasy.framework */,
 				4EB278CBEF97676940837A84 /* Pods_testPageViewController.framework */,
 			);
 			name = Frameworks;
@@ -69,6 +79,7 @@
 		859E65492095AD19005591EF /* Soucese */ = {
 			isa = PBXGroup;
 			children = (
+				85F05C43209A27F0002C1C08 /* TabView */,
 				859E654A2095AD19005591EF /* testPageViewController */,
 			);
 			path = Soucese;
@@ -85,6 +96,16 @@
 				859E65522095AD19005591EF /* Info.plist */,
 			);
 			path = testPageViewController;
+			sourceTree = "<group>";
+		};
+		85F05C43209A27F0002C1C08 /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				85F05C44209A2803002C1C08 /* TabView.swift */,
+				85F05C48209B0B5C002C1C08 /* TabCollectionCell.swift */,
+				85F05C46209A2939002C1C08 /* TabPageOption.swift */,
+			);
+			path = TabView;
 			sourceTree = "<group>";
 		};
 		ACE80751B1667CEA35C659EB /* Pods */ = {
@@ -108,6 +129,7 @@
 				859E65312094B395005591EF /* Frameworks */,
 				859E65322094B395005591EF /* Resources */,
 				65EF6583486713F71E055F81 /* [CP] Embed Pods Frameworks */,
+				85F05C4C209B0ED2002C1C08 /* Install Carthage Script */,
 			);
 			buildRules = (
 			);
@@ -201,6 +223,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-testPageViewController/Pods-testPageViewController-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		85F05C4C209B0ED2002C1C08 /* Install Carthage Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/EasyPeasy.framework",
+			);
+			name = "Install Carthage Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -209,7 +246,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				859E65572095AD19005591EF /* AppDelegate.swift in Sources */,
+				85F05C45209A2803002C1C08 /* TabView.swift in Sources */,
+				85F05C49209B0B5C002C1C08 /* TabCollectionCell.swift in Sources */,
 				859E65532095AD19005591EF /* ViewController.swift in Sources */,
+				85F05C47209A2939002C1C08 /* TabPageOption.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,8 +395,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Soucese/testPageViewController/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.syouit.testPageViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -370,8 +417,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Soucese/testPageViewController/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.syouit.testPageViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
