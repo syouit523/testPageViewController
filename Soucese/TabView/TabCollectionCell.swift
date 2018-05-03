@@ -17,10 +17,11 @@ class TabCollectionCell: UICollectionViewCell {
     
     
     
-//    var tabItemButtonPressedBlock: (() -> Void)?
+    var tabItemButtonPressedBlock: (() -> Void)?
     var option: TabPageOption = TabPageOption() {
         didSet {
             // currentBarViewHeightConstraint.constant = option.currentBarHeight
+            currentBarView.easy.layout(Height(option.currentBarHeight))
         }
     }
     var item: String = "" {
