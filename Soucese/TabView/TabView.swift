@@ -29,7 +29,7 @@ internal class TabView: UIView {
     fileprivate var pageTabItemsWidth: CGFloat = 0
     fileprivate var collectionViewContentOffsetX: CGFloat = 0
     fileprivate var currentBarViewWidth: CGFloat = 0.0
-    fileprivate var cellForSize: TabCollectionCell!
+    fileprivate var cellForSize: TabCollectionCell! = TabCollectionCell()
     fileprivate var cachedCellSizes: [IndexPath: CGSize] = [:]
     
     var contentView: UIView = UIView(frame: .zero)
@@ -37,26 +37,32 @@ internal class TabView: UIView {
     fileprivate var currentBarView = UIView(frame: .zero)
     
     init(isInfinity: Bool, option: TabPageOption) {
+        contentView: do {
+            contentView.backgroundColor = option.tabBackgroundColor.withAlphaComponent(option.tabBarAlpha)
+            
+            contentView.translatesAutoresizingMaskIntoConstraints = false
+        }
         collectionView: do {
             //            collectionView.collectionViewLayout = UICollectionViewFlowLayout()
             let flowLayout = UICollectionViewFlowLayout()
-            flowLayout.scrollDirection = .vertical
+            flowLayout.scrollDirection = .horizontal
             flowLayout.minimumInteritemSpacing = 5
             flowLayout.minimumLineSpacing = 5
             flowLayout.itemSize = CGSize(width: 100, height: 100)
             collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
             
-
+            collectionView.register(TabCollectionCell.self, forCellWithReuseIdentifier: "TabCollectionCell")
         }
         super.init(frame: .zero)
         collectionView.delegate = self
         collectionView.dataSource = self
+        addSubview(contentView)
+
+        addSubview(collectionView)
         self.option = option
         self.isInfinity = isInfinity
-        addSubview(contentView)
-        contentView.backgroundColor = option.tabBackgroundColor.withAlphaComponent(option.tabBarAlpha)
         
-        contentView.translatesAutoresizingMaskIntoConstraints = false
+        
 
         layout: do {
             collectionView.easy.layout(
@@ -278,7 +284,8 @@ extension TabView: UICollectionViewDataSource {
     
     internal func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TabCollectionCell.cellIdentifier(), for: indexPath) as! TabCollectionCell
-        configureCell(cell, indexPath: indexPath)
+//        let cell = TabCollectionCell()
+//        configureCell(cell, indexPath: indexPath)
         return cell
     }
     
