@@ -33,17 +33,31 @@ internal class TabView: UIView {
     fileprivate var cachedCellSizes: [IndexPath: CGSize] = [:]
     
     var contentView: UIView = UIView(frame: .zero)
-    fileprivate var collectionView = UICollectionView(frame: .zero)
+    fileprivate var collectionView:UICollectionView
     fileprivate var currentBarView = UIView(frame: .zero)
     
     init(isInfinity: Bool, option: TabPageOption) {
+        collectionView: do {
+            //            collectionView.collectionViewLayout = UICollectionViewFlowLayout()
+            let flowLayout = UICollectionViewFlowLayout()
+            flowLayout.scrollDirection = .vertical
+            flowLayout.minimumInteritemSpacing = 5
+            flowLayout.minimumLineSpacing = 5
+            flowLayout.itemSize = CGSize(width: 100, height: 100)
+            collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+            
+
+        }
         super.init(frame: .zero)
+        collectionView.delegate = self
+        collectionView.dataSource = self
         self.option = option
         self.isInfinity = isInfinity
         addSubview(contentView)
         contentView.backgroundColor = option.tabBackgroundColor.withAlphaComponent(option.tabBarAlpha)
         
         contentView.translatesAutoresizingMaskIntoConstraints = false
+
         layout: do {
             collectionView.easy.layout(
                 Top(),
