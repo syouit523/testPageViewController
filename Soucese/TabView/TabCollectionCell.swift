@@ -48,6 +48,14 @@ class TabCollectionCell: UICollectionViewCell {
     init() {
         super.init(frame: .zero)
         currentBarView.isHidden = true
+        backgroundColor = .white
+        addSubview(itemLabel)
+        currentBarView.backgroundColor = .blue
+        addSubview(currentBarView)
+        layout: do {
+            itemLabel.easy.layout(CenterX(),CenterY())
+            currentBarView.easy.layout(Left(),Right(),Height(2),Bottom())
+        }
     }
     
     override convenience init(frame: CGRect) {

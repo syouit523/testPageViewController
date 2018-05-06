@@ -284,8 +284,7 @@ extension TabView: UICollectionViewDataSource {
     
     internal func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TabCollectionCell.cellIdentifier(), for: indexPath) as! TabCollectionCell
-//        let cell = TabCollectionCell()
-//        configureCell(cell, indexPath: indexPath)
+        configureCell(cell, indexPath: indexPath)
         return cell
     }
     
