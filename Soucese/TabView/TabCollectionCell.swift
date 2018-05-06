@@ -15,12 +15,9 @@ class TabCollectionCell: UICollectionViewCell {
     fileprivate var itemLabel: UILabel = UILabel(frame: .zero)
     fileprivate var currentBarView: UIView = UIView(frame: .zero)
     
-    
-    
     var tabItemButtonPressedBlock: (() -> Void)?
     var option: TabPageOption = TabPageOption() {
         didSet {
-            // currentBarViewHeightConstraint.constant = option.currentBarHeight
             currentBarView.easy.layout(Height(option.currentBarHeight))
         }
     }
@@ -49,8 +46,9 @@ class TabCollectionCell: UICollectionViewCell {
         super.init(frame: .zero)
         currentBarView.isHidden = true
         backgroundColor = .white
-        addSubview(itemLabel)
         currentBarView.backgroundColor = .blue
+        
+        addSubview(itemLabel)
         addSubview(currentBarView)
         layout: do {
             itemLabel.easy.layout(CenterX(),CenterY())
@@ -66,6 +64,8 @@ class TabCollectionCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    // MARK: - Functions
     override func sizeThatFits(_ size: CGSize) -> CGSize {
         if item.count == 0 {
             return .zero

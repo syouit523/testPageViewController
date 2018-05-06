@@ -63,7 +63,7 @@ internal class TabView: UIView {
         self.isInfinity = isInfinity
         
         
-
+        addSubview(currentBarView)
         layout: do {
             collectionView.easy.layout(
                 Top(),
@@ -79,9 +79,9 @@ internal class TabView: UIView {
             )
             currentBarView.easy.layout(
                 CenterX(),
-                Width(100),
-                Bottom(),
-                Height(option.currentBarHeight)
+                Width(100).with(.low),
+                Height(option.currentBarHeight),
+                Bottom()
             )
             self.easy.layout(
                 Bottom().to(contentView),
@@ -166,13 +166,17 @@ extension TabView {
             } else {
                 if scrollRate > 0 {
 //                    currentBarViewLeftConstraint?.constant = currentCell.frame.minX + scrollRate * currentCell.frame.width
+                    currentBarView.easy.layout(Left(currentCell.frame.minX + scrollRate * currentCell.frame.width))
                 } else {
 //                    currentBarViewLeftConstraint?.constant = currentCell.frame.minX + nextCell.frame.width * scrollRate
+                    currentBarView.easy.layout(Left(currentCell.frame.minX + nextCell.frame.width * scrollRate))
                 }
             }
             // currentBarViewWidthConstraint.constant = currentBarViewWidth + width
+            currentBarView.easy.layout(Width(currentBarViewWidth + width))
         }
     }
+
     
     /**
      Center the current cell after page swipe
