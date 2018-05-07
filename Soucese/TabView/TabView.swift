@@ -166,14 +166,11 @@ extension TabView {
                 collectionView.contentOffset.x = collectionViewContentOffsetX + scroll
             } else {
                 if scrollRate > 0 {
-//                    currentBarViewLeftConstraint?.constant = currentCell.frame.minX + scrollRate * currentCell.frame.width
                     currentBarView.easy.layout(Left(currentCell.frame.minX + scrollRate * currentCell.frame.width))
                 } else {
-//                    currentBarViewLeftConstraint?.constant = currentCell.frame.minX + nextCell.frame.width * scrollRate
                     currentBarView.easy.layout(Left(currentCell.frame.minX + nextCell.frame.width * scrollRate))
                 }
             }
-            // currentBarViewWidthConstraint.constant = currentBarViewWidth + width
             currentBarView.easy.layout(Width(currentBarViewWidth + width))
         }
     }
@@ -334,6 +331,14 @@ extension TabView: UICollectionViewDataSource {
 // MARK: - UIScrollViewDelegate
 
 extension TabView: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.row)
+        guard let cell = collectionView.cellForItem(at: indexPath) as? TabCollectionCell else {
+            return
+        }
+        cell.tabItemButtonPressedBlock?()
+    }
     
     internal func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.isDragging {
