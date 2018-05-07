@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8534FACA209B8BE100A4B337 /* TabPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8534FAC9209B8BE100A4B337 /* TabPageViewController.swift */; };
+		8534FAEB20A0777800A4B337 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8534FAE920A0777800A4B337 /* RxCocoa.framework */; };
+		8534FAEC20A0777800A4B337 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8534FAEA20A0777800A4B337 /* RxSwift.framework */; };
 		859E65532095AD19005591EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859E654B2095AD19005591EF /* ViewController.swift */; };
 		859E65542095AD19005591EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 859E654C2095AD19005591EF /* Assets.xcassets */; };
 		859E65552095AD19005591EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 859E654D2095AD19005591EF /* LaunchScreen.storyboard */; };
@@ -22,6 +24,8 @@
 /* Begin PBXFileReference section */
 		4EB278CBEF97676940837A84 /* Pods_testPageViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testPageViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8534FAC9209B8BE100A4B337 /* TabPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPageViewController.swift; sourceTree = "<group>"; };
+		8534FAE920A0777800A4B337 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		8534FAEA20A0777800A4B337 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		859E65342094B395005591EF /* testPageViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testPageViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		859E654B2095AD19005591EF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		859E654C2095AD19005591EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8534FAEB20A0777800A4B337 /* RxCocoa.framework in Frameworks */,
+				8534FAEC20A0777800A4B337 /* RxSwift.framework in Frameworks */,
 				85F05C4B209B0EC5002C1C08 /* EasyPeasy.framework in Frameworks */,
 				AAB2C19114B0611DD9B98AE2 /* Pods_testPageViewController.framework in Frameworks */,
 			);
@@ -52,6 +58,8 @@
 		086134055EF530DF6466B023 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8534FAE920A0777800A4B337 /* RxCocoa.framework */,
+				8534FAEA20A0777800A4B337 /* RxSwift.framework */,
 				85F05C4A209B0EC5002C1C08 /* EasyPeasy.framework */,
 				4EB278CBEF97676940837A84 /* Pods_testPageViewController.framework */,
 			);
@@ -229,6 +237,8 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/EasyPeasy.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 			);
 			name = "Install Carthage Script";
 			outputPaths = (

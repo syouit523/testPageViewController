@@ -88,6 +88,7 @@ internal class TabView: UIView {
                 Right().to(contentView)
             )
             collectionView.scrollsToTop = false
+            collectionView.showsHorizontalScrollIndicator = false
             currentBarView.backgroundColor = option.currentColor
             
             if !isInfinity {
