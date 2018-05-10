@@ -95,9 +95,9 @@ internal class TabView: UIView {
                 currentBarView.removeFromSuperview()
                 collectionView.addSubview(currentBarView)
                 currentBarView.translatesAutoresizingMaskIntoConstraints = false
-                
-                collectionView.easy.layout(
-                    Top(),
+
+                currentBarView.easy.layout(
+                    Top(option.tabHeight - option.currentBarHeight).with(.high),
                     Left()
                 )
             }

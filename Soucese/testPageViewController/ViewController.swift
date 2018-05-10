@@ -23,7 +23,7 @@ class ViewController: TabPageViewController {
         let vc5 = UIViewController()
         vc5.view.backgroundColor = UIColor(red: 252/255, green: 182/255, blue: 106/255, alpha: 1.0)
         tabItems = [(vc1, "Mon."), (vc2, "Tue."), (vc3, "Wed."), (vc4, "Thu."), (vc5, "Fri.")]
-        isInfinity = true
+        isInfinity = false
         option.currentColor = UIColor(red: 246/255, green: 175/255, blue: 32/255, alpha: 1.0)
         option.tabMargin = 30.0
     }
